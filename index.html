@@ -3,38 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我们的纪念</title>
+    <title>悠屿小窝</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* 全局样式重置，避免浏览器差异 */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            box-sizing: border-box;
+        }
+
+        /* 页面背景（橙色浅色） */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff3e0; /* 橙色浅色，覆盖整个页面 */
             color: #333;
             text-align: center;
-        }
-        .container {
-            max-width: 800px;
-            margin: 50px auto;
             padding: 20px;
-            background-color: white;
+        }
+
+        /* 容器颜色改为橙色浅色 */
+        .container {
+            width: 100%; /* 确保在手机端铺满整个宽度 */
+            max-width: 800px; /* 桌面端最大宽度，避免过宽 */
+            margin: 30px auto; /* 桌面端居中，手机端自动调整 */
+            padding: 20px;
+            background-color: #fff3e0; /* 容器背景色改为橙色浅色 */
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        h1 {
-            color: #e91e63;
+
+        /* 暖色方框（主色：橙色#ff9500） */
+        .welcome-box {
+            background-color: #f7cdc0; /* 暖色方框背景 */
+            color: white; /* 文字颜色 */
+            padding: 30px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            /*display: block; /* 初始显示 */
+            display: flex; /* 水平排列图片和文字 */
+            align-items: center; /* 垂直居中 */
+            justify-content: center; /* 水平居中（关键修改） */
         }
-        p {
-            font-size: 18px;
+
+        /* 方框内标题样式 */
+        .welcome-box h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        /* 方框内段落样式 */
+        .welcome-box p {
+            font-size: 16px;
             line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+         /* 方框内图片样式（根据第二张图调整大小） */
+        .welcome-box img {
+            width: 150px; /* 图片宽度（根据第二张图调整，可修改为160px等） */
+            height: auto; /* 保持图片比例 */
+            margin-right: 30px; /* 图片与文字的间距（水平排列时） */
+            border-radius: 8px; /* 图片圆角（可选，与方框风格一致） */
+        }
+
+        /* 确认按钮样式 */
+        .confirm-btn {
+            background-color: white;
+            color: #f7cdc0; /* 按钮文字颜色与方框背景一致 */
+            border: 2px solid #f7d3c8; /* 按钮边框颜色 */
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s; /*  hover过渡效果 */
+        }
+
+        /* 按钮 hover 效果 */
+        .confirm-btn:hover {
+            background-color: #fff3e0;
+            color: white;
+        }
+
+        /* 响应式调整（手机端优化） */
+        @media only screen and (max-width: 600px) {
+            .container {
+                margin: 20px auto; /* 减小容器边距，更紧凑 */
+                padding: 15px;
+            }
+            .welcome-box {
+                padding: 20px; /* 减小方框内边距 */
+            }
+            .welcome-box h2 {
+                font-size: 20px; /* 缩小标题字体 */
+            }
+            .welcome-box p {
+                font-size: 14px; /* 缩小段落字体 */
+            }
+            .confirm-btn {
+                padding: 8px 16px; /* 减小按钮 padding */
+                font-size: 14px; /* 缩小按钮字体 */
+            }
+             /* 方框内图片样式（根据第二张图调整大小） */
+            .welcome-box img {
+                width: 150px; /* 图片宽度（根据第二张图调整，可修改为160px等） */
+                height: auto; /* 保持图片比例 */
+                margin-right: 30px; /* 图片与文字的间距（水平排列时） */
+                border-radius: 8px; /* 图片圆角（可选，与方框风格一致） */
+        }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>这是我们的第一个周年纪念</h1>
-        <p>亲爱的，这一年里，感谢你的陪伴。</p>
-        <p>每一个瞬间，都因为有你而变得特别。</p>
+        <!-- 暖色方框（初始显示） -->
+        <div class="welcome-box" id="welcomeBox">
+            <!-- 插入photo文件夹中的p1图片 -->
+            <img src="photo\p1.jpg">
+            <div class="text-content">
+                <h2>亲爱的屿 欢迎来到这里</h2>
+                <p>准备好了嘛</p>
+                <button class="confirm-btn" id="confirmBtn">确认</button>
+            </div>
+        </div>
     </div>
+
+    <!-- JavaScript：点击按钮隐藏方框 -->
+    <script>
+        // 获取确认按钮和欢迎框元素
+        const confirmBtn = document.getElementById('confirmBtn');
+        const welcomeBox = document.getElementById('welcomeBox');
+
+        // 添加点击事件，点击后隐藏方框
+        confirmBtn.addEventListener('click', function() {
+            welcomeBox.style.display = 'none'; // 隐藏方框
+        });
+    </script>
 </body>
 </html>
