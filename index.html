@@ -40,35 +40,68 @@
             border-radius: 10px;
             margin: 20px 0;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            /*display: block; /* 初始显示 */
             display: flex; /* 水平排列图片和文字 */
             align-items: center; /* 垂直居中 */
             justify-content: center; /* 水平居中（关键修改） */
         }
 
+        /* 第二个方框（初始隐藏） */
+        .choice-box {
+            background-color: #f7cdc0; /* 暖色方框背景 */
+            color: white; /* 文字颜色 */
+            padding: 30px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: none; /* 初始隐藏 */
+        }
+
+        /* 第三个方框（初始隐藏） */
+        .rest-box {
+            background-color: #f7cdc0; /* 暖色方框背景 */
+            color: white; /* 文字颜色 */
+            padding: 30px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: none; /* 初始隐藏 */
+        }
+
+        /* 第四个方框（初始隐藏） */
+        .final-box {
+            background-color: #f7cdc0; /* 暖色方框背景 */
+            color: white; /* 文字颜色 */
+            padding: 30px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: none; /* 初始隐藏 */
+        }
+
         /* 方框内标题样式 */
-        .welcome-box h2 {
+        .welcome-box h2, .choice-box h2, .rest-box h2, .final-box h2 {
             font-size: 24px;
             margin-bottom: 15px;
         }
 
         /* 方框内段落样式 */
-        .welcome-box p {
+        .welcome-box p, .choice-box p, .rest-box p, .final-box p {
             font-size: 16px;
             line-height: 1.6;
             margin-bottom: 20px;
         }
 
-         /* 方框内图片样式（根据第二张图调整大小） */
-        .welcome-box img {
+        /* 方框内图片样式（根据第二张图调整大小） */
+        .welcome-box img, .final-box img {
             width: 150px; /* 图片宽度（根据第二张图调整，可修改为160px等） */
             height: auto; /* 保持图片比例 */
             margin-right: 30px; /* 图片与文字的间距（水平排列时） */
             border-radius: 8px; /* 图片圆角（可选，与方框风格一致） */
         }
 
+
         /* 确认按钮样式 */
-        .confirm-btn {
+        .confirm-btn, .choice-btn, .rest-btn {
             background-color: white;
             color: #f7cdc0; /* 按钮文字颜色与方框背景一致 */
             border: 2px solid #f7d3c8; /* 按钮边框颜色 */
@@ -77,10 +110,11 @@
             font-size: 16px;
             cursor: pointer;
             transition: background-color 0.3s, color 0.3s; /*  hover过渡效果 */
+            margin: 0 10px; /* 按钮之间的间距 */
         }
 
         /* 按钮 hover 效果 */
-        .confirm-btn:hover {
+        .confirm-btn:hover, .choice-btn:hover, .rest-btn:hover {
             background-color: #fff3e0;
             color: white;
         }
@@ -91,52 +125,117 @@
                 margin: 20px auto; /* 减小容器边距，更紧凑 */
                 padding: 15px;
             }
-            .welcome-box {
+            .welcome-box, .choice-box, .rest-box, .final-box {
                 padding: 20px; /* 减小方框内边距 */
             }
-            .welcome-box h2 {
+            .welcome-box h2, .choice-box h2, .rest-box h2, .final-box h2 {
                 font-size: 20px; /* 缩小标题字体 */
             }
-            .welcome-box p {
+            .welcome-box p, .choice-box p, .rest-box p, .final-box p {
                 font-size: 14px; /* 缩小段落字体 */
             }
-            .confirm-btn {
+            .confirm-btn, .choice-btn, .rest-btn {
                 padding: 8px 16px; /* 减小按钮 padding */
                 font-size: 14px; /* 缩小按钮字体 */
             }
-             /* 方框内图片样式（根据第二张图调整大小） */
-            .welcome-box img {
+            .welcome-box img, .final-box img {
                 width: 150px; /* 图片宽度（根据第二张图调整，可修改为160px等） */
                 height: auto; /* 保持图片比例 */
                 margin-right: 30px; /* 图片与文字的间距（水平排列时） */
                 border-radius: 8px; /* 图片圆角（可选，与方框风格一致） */
-        }
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- 暖色方框（初始显示） -->
+        <!-- 第一个方框（初始显示） -->
         <div class="welcome-box" id="welcomeBox">
             <!-- 插入photo文件夹中的p1图片 -->
             <img src="photo\p1.jpg">
             <div class="text-content">
-                <h2>亲爱的屿 欢迎来到这里</h2>
+                <h2>亲爱的屿</h2>
+                <p>欢迎来到这里</p>
                 <p>准备好了嘛</p>
                 <button class="confirm-btn" id="confirmBtn">确认</button>
             </div>
         </div>
+
+        <!-- 第二个方框（初始隐藏） -->
+        <div class="choice-box" id="choiceBox">
+            <h2>2022年5月31日</h2>
+            <p>今天晚上你因为排位心情不好，这时你选择？</p>
+            <button class="choice-btn" id="quitBtn">退出第五人格</button>
+            <button class="choice-btn" id="goHomeBtn">去逛逛归宿</button>
+        </div>
+
+        <!-- 第三个方框（初始隐藏） -->
+        <div class="rest-box" id="restBox">
+            <h2>似乎是个不错的休息地...</h2>
+            <p>在这个秋千上看他们在聊什么吧</p>
+            <button class="rest-btn" id="afterBtn">过了一会后...</button>
+        </div>
+
+        <!-- 第四个方框（初始隐藏） -->
+        <div class="final-box" id="finalBox">
+            <img src="photo\p3.jpg">
+            <div class="text-content">
+                <h2>有人悄悄坐上了你的秋千...</h2>
+                <button class="rest-btn" id="afterBtn">愉快的展开~</button>
+
+            </div>
+        </div>
     </div>
 
-    <!-- JavaScript：点击按钮隐藏方框 -->
+    <!-- JavaScript：处理页面切换 -->
     <script>
-        // 获取确认按钮和欢迎框元素
+        // 获取元素
         const confirmBtn = document.getElementById('confirmBtn');
         const welcomeBox = document.getElementById('welcomeBox');
+        const choiceBox = document.getElementById('choiceBox');
+        const restBox = document.getElementById('restBox');
+        const finalBox = document.getElementById('finalBox');
+        const quitBtn = document.getElementById('quitBtn');
+        const goHomeBtn = document.getElementById('goHomeBtn');
+        const afterBtn = document.getElementById('afterBtn');
 
-        // 添加点击事件，点击后隐藏方框
+        // 第一个方框的确认按钮点击事件
         confirmBtn.addEventListener('click', function() {
-            welcomeBox.style.display = 'none'; // 隐藏方框
+            welcomeBox.style.display = 'none'; // 隐藏第一个方框
+            choiceBox.style.display = 'block'; // 显示第二个方框
+        });
+
+        // 第二个方框的"退出第五人格"按钮点击事件
+        quitBtn.addEventListener('click', function() {
+            // 隐藏原内容
+            choiceBox.innerHTML = '';
+            
+            // 添加新内容
+            const newContent = document.createElement('div');
+            newContent.innerHTML = `
+                <p>呀咩咯</p>
+                <p>某人是第五人格忠实的兵</p>
+                <button class="choice-btn" id="dynamicGoHomeBtn">去逛逛归宿</button>
+            `;
+            choiceBox.appendChild(newContent);
+            
+            // 为动态生成的按钮绑定事件
+            document.getElementById('dynamicGoHomeBtn').addEventListener('click', function() {
+                choiceBox.style.display = 'none'; // 隐藏第二个方框
+                restBox.style.display = 'block'; // 显示第三个方框
+            });
+        });
+
+        // 第二个方框的"去逛逛归宿"按钮点击事件（静态按钮）
+        goHomeBtn.addEventListener('click', function() {
+            choiceBox.style.display = 'none'; // 隐藏第二个方框
+            restBox.style.display = 'block'; // 显示第三个方框
+        });
+
+        // 第三个方框的"过了一会..."按钮点击事件
+        afterBtn.addEventListener('click', function() {
+            restBox.style.display = 'none'; // 隐藏第三个方框
+            finalBox.style.display = 'flex'; // 显示第四个方框，使用flex布局
         });
     </script>
 </body>
