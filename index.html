@@ -15,7 +15,7 @@
         /* 页面背景（橙色浅色） */
         body {
             font-family: Arial, sans-serif;
-            background-color: #fff3e0; /* 橙色浅色，覆盖整个页面 */
+            background-color: #fff3e0;
             color: #333;
             text-align: center;
             padding: 20px;
@@ -23,100 +23,106 @@
 
         /* 容器颜色改为橙色浅色 */
         .container {
-            width: 100%; /* 确保在手机端铺满整个宽度 */
-            max-width: 800px; /* 桌面端最大宽度，避免过宽 */
-            margin: 30px auto; /* 桌面端居中，手机端自动调整 */
+            width: 100%;
+            max-width: 800px;
+            margin: 30px auto;
             padding: 20px;
-            background-color: #fff3e0; /* 容器背景色改为橙色浅色 */
+            background-color: #fff3e0;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
 
         /* 暖色方框（主色：橙色#ff9500） */
         .welcome-box {
-            background-color: #f7cdc0; /* 暖色方框背景 */
-            color: white; /* 文字颜色 */
+            background-color: #f7cdc0;
+            color: white;
             padding: 30px;
             border-radius: 10px;
             margin: 20px 0;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            display: flex; /* 水平排列图片和文字 */
-            align-items: center; /* 垂直居中 */
-            justify-content: center; /* 水平居中（关键修改） */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        /* 第二个方框（初始隐藏） */
         .choice-box {
-            background-color: #f7cdc0; /* 暖色方框背景 */
-            color: white; /* 文字颜色 */
+            background-color: #f7cdc0;
+            color: white;
             padding: 30px;
             border-radius: 10px;
             margin: 20px 0;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            display: none; /* 初始隐藏 */
+            display: none;
         }
 
-        /* 第三个方框（初始隐藏） */
         .rest-box {
-            background-color: #f7cdc0; /* 暖色方框背景 */
-            color: white; /* 文字颜色 */
+            background-color: #f7cdc0;
+            color: white;
             padding: 30px;
             border-radius: 10px;
             margin: 20px 0;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            display: none; /* 初始隐藏 */
+            display: none;
         }
 
-        /* 第四个方框（初始隐藏） */
         .final-box {
-            background-color: #f7cdc0; /* 暖色方框背景 */
-            color: white; /* 文字颜色 */
+            background-color: #f7cdc0;
+            color: white;
             padding: 30px;
             border-radius: 10px;
             margin: 20px 0;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            align-items: center; /* 垂直居中 */
-            justify-content: center; /* 水平居中（关键修改） */
-            display: none; /* 初始隐藏 */
+            align-items: center;
+            justify-content: center;
+            display: none;
+        }
+
+        /* 第五个方框（初始隐藏） */
+        .fifth-box {
+            background-color: #f7cdc0;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: none;
         }
 
         /* 方框内标题样式 */
-        .welcome-box h2, .choice-box h2, .rest-box h2, .final-box h2 {
+        .welcome-box h2, .choice-box h2, .rest-box h2, .final-box h2, .fifth-box h2 {
             font-size: 24px;
             margin-bottom: 15px;
         }
 
         /* 方框内段落样式 */
-        .welcome-box p, .choice-box p, .rest-box p, .final-box p {
+        .welcome-box p, .choice-box p, .rest-box p, .final-box p, .fifth-box p {
             font-size: 16px;
             line-height: 1.6;
             margin-bottom: 20px;
         }
 
-        /* 方框内图片样式（根据第二张图调整大小） */
+        /* 方框内图片样式 */
         .welcome-box img, .final-box img {
-            width: 150px; /* 图片宽度（根据第二张图调整，可修改为160px等） */
-            height: 150px; /* 保持图片比例 */
-            margin-right: 30px; /* 图片与文字的间距（水平排列时） */
-            border-radius: 8px; /* 图片圆角（可选，与方框风格一致） */
+            width: 150px;
+            height: 150px;
+            margin-right: 30px;
+            border-radius: 8px;
         }
 
-
-        /* 确认按钮样式 */
-        .confirm-btn, .choice-btn, .rest-btn {
+        /* 按钮样式 */
+        .confirm-btn, .choice-btn, .rest-btn, .date-btn {
             background-color: white;
-            color: #f7cdc0; /* 按钮文字颜色与方框背景一致 */
-            border: 2px solid #f7d3c8; /* 按钮边框颜色 */
+            color: #f7cdc0;
+            border: 2px solid #f7d3c8;
             padding: 10px 20px;
             border-radius: 5px;
             font-size: 16px;
             cursor: pointer;
-            transition: background-color 0.3s, color 0.3s; /*  hover过渡效果 */
-            margin: 0 10px; /* 按钮之间的间距 */
+            transition: background-color 0.3s, color 0.3s;
+            margin: 0 10px;
         }
 
-        /* 按钮 hover 效果 */
-        .confirm-btn:hover, .choice-btn:hover, .rest-btn:hover {
+        .confirm-btn:hover, .choice-btn:hover, .rest-btn:hover, .date-btn:hover {
             background-color: #fff3e0;
             color: white;
         }
@@ -124,27 +130,27 @@
         /* 响应式调整（手机端优化） */
         @media only screen and (max-width: 600px) {
             .container {
-                margin: 20px auto; /* 减小容器边距，更紧凑 */
+                margin: 20px auto;
                 padding: 15px;
             }
-            .welcome-box, .choice-box, .rest-box, .final-box {
-                padding: 20px; /* 减小方框内边距 */
+            .welcome-box, .choice-box, .rest-box, .final-box, .fifth-box {
+                padding: 20px;
             }
-            .welcome-box h2, .choice-box h2, .rest-box h2, .final-box h2 {
-                font-size: 20px; /* 缩小标题字体 */
+            .welcome-box h2, .choice-box h2, .rest-box h2, .final-box h2, .fifth-box h2 {
+                font-size: 20px;
             }
-            .welcome-box p, .choice-box p, .rest-box p, .final-box p {
-                font-size: 14px; /* 缩小段落字体 */
+            .welcome-box p, .choice-box p, .rest-box p, .final-box p, .fifth-box p {
+                font-size: 14px;
             }
-            .confirm-btn, .choice-btn, .rest-btn {
-                padding: 8px 16px; /* 减小按钮 padding */
-                font-size: 14px; /* 缩小按钮字体 */
+            .confirm-btn, .choice-btn, .rest-btn, .date-btn {
+                padding: 8px 16px;
+                font-size: 14px;
             }
             .welcome-box img, .final-box img {
-                width: 150px; /* 图片宽度（根据第二张图调整，可修改为160px等） */
-                height: auto; /* 保持图片比例 */
-                margin-right: 30px; /* 图片与文字的间距（水平排列时） */
-                border-radius: 8px; /* 图片圆角（可选，与方框风格一致） */
+                width: 150px;
+                height: auto;
+                margin-right: 30px;
+                border-radius: 8px;
             }
         }
     </style>
@@ -153,8 +159,7 @@
     <div class="container">
         <!-- 第一个方框（初始显示） -->
         <div class="welcome-box" id="welcomeBox">
-            <!-- 插入photo文件夹中的p1图片 -->
-            <img src="photo\p1.jpg">
+            <img src="photo\p4.jpg">
             <div class="text-content">
                 <h2>亲爱的屿</h2>
                 <p>欢迎来到这里</p>
@@ -184,9 +189,15 @@
                 <h2>有人悄悄坐上了你的秋千...</h2>
                 <p>...</p>
                 <p>似乎要有什么有趣的事情发生了~</p>
-                <button class="rest-btn" id="afterBtn">2025年6月1日</button>
-
+                <button class="rest-btn" id="toFifthBtn">2025年6月1日</button>
             </div>
+        </div>
+
+        <!-- 第五个方框（初始隐藏） -->
+        <div class="fifth-box" id="fifthBox">
+            <h2>正式认识的第一天...有点懵</h2>
+            <p>事后我们聊过很多次，聊是怎么相遇的，聊是怎么开始的</p>
+            <button class="date-btn" id="dateBtn2026">2026年6月7日</button>
         </div>
     </div>
 
@@ -198,22 +209,23 @@
         const choiceBox = document.getElementById('choiceBox');
         const restBox = document.getElementById('restBox');
         const finalBox = document.getElementById('finalBox');
+        const fifthBox = document.getElementById('fifthBox');
         const quitBtn = document.getElementById('quitBtn');
         const goHomeBtn = document.getElementById('goHomeBtn');
         const afterBtn = document.getElementById('afterBtn');
+        const toFifthBtn = document.getElementById('toFifthBtn');
+        const dateBtn2026 = document.getElementById('dateBtn2026');
 
         // 第一个方框的确认按钮点击事件
         confirmBtn.addEventListener('click', function() {
-            welcomeBox.style.display = 'none'; // 隐藏第一个方框
-            choiceBox.style.display = 'block'; // 显示第二个方框
+            welcomeBox.style.display = 'none';
+            choiceBox.style.display = 'block';
         });
 
         // 第二个方框的"退出第五人格"按钮点击事件
         quitBtn.addEventListener('click', function() {
-            // 隐藏原内容
             choiceBox.innerHTML = '';
             
-            // 添加新内容
             const newContent = document.createElement('div');
             newContent.innerHTML = `
                 <p>呀咩咯</p>
@@ -222,23 +234,33 @@
             `;
             choiceBox.appendChild(newContent);
             
-            // 为动态生成的按钮绑定事件
             document.getElementById('dynamicGoHomeBtn').addEventListener('click', function() {
-                choiceBox.style.display = 'none'; // 隐藏第二个方框
-                restBox.style.display = 'block'; // 显示第三个方框
+                choiceBox.style.display = 'none';
+                restBox.style.display = 'block';
             });
         });
 
-        // 第二个方框的"去逛逛归宿"按钮点击事件（静态按钮）
+        // 第二个方框的"去逛逛归宿"按钮点击事件
         goHomeBtn.addEventListener('click', function() {
-            choiceBox.style.display = 'none'; // 隐藏第二个方框
-            restBox.style.display = 'block'; // 显示第三个方框
+            choiceBox.style.display = 'none';
+            restBox.style.display = 'block';
         });
 
         // 第三个方框的"过了一会..."按钮点击事件
         afterBtn.addEventListener('click', function() {
-            restBox.style.display = 'none'; // 隐藏第三个方框
-            finalBox.style.display = 'flex'; // 显示第四个方框，使用flex布局
+            restBox.style.display = 'none';
+            finalBox.style.display = 'flex';
+        });
+
+        // 第四个方框的"2025年6月1日"按钮点击事件 → 显示第五个方框
+        toFifthBtn.addEventListener('click', function() {
+            finalBox.style.display = 'none';
+            fifthBox.style.display = 'block';
+        });
+
+        // 第五个方框的"2026年6月7日"按钮点击事件（预留后续扩展）
+        dateBtn2026.addEventListener('click', function() {
+            // 后续可以继续添加下一个方框
         });
     </script>
 </body>
