@@ -77,7 +77,6 @@
             display: none;
         }
 
-        /* 第五个方框（初始隐藏） */
         .fifth-box {
             background-color: #f7cdc0;
             color: white;
@@ -88,7 +87,6 @@
             display: none;
         }
 
-        /* 第六个方框（初始隐藏） */
         .sixth-box {
             background-color: #f7cdc0;
             color: white;
@@ -99,20 +97,69 @@
             display: none;
         }
 
-        /* 方框内标题样式 */
+        .seventh-box {
+            background-color: #f7cdc0;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: none;
+        }
+
+        .eighth-box {
+            background-color: #f7cdc0;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: none;
+        }
+
+        .ninth-box {
+            background-color: #f7cdc0;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: none;
+        }
+
+        .ninth-box .english-text {
+            font-style: italic;
+        }
+
+        .last-photo-box {
+            background-color: #f7cdc0;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .last-photo-box img {
+            width: 150px;
+            height: 150px;
+            border-radius: 8px;
+        }
+
         .welcome-box h2, .choice-box h2, .rest-box h2, .final-box h2, .fifth-box h2, .sixth-box h2 {
             font-size: 24px;
             margin-bottom: 15px;
         }
 
-        /* 方框内段落样式 */
-        .welcome-box p, .choice-box p, .rest-box p, .final-box p, .fifth-box p, .sixth-box p {
+        .welcome-box p, .choice-box p, .rest-box p, .final-box p, .fifth-box p, .sixth-box p, .ninth-box p {
             font-size: 16px;
             line-height: 1.6;
             margin-bottom: 20px;
         }
 
-        /* 方框内图片样式 */
         .welcome-box img, .final-box img {
             width: 150px;
             height: 150px;
@@ -120,7 +167,6 @@
             border-radius: 8px;
         }
 
-        /* 按钮样式 */
         .confirm-btn, .choice-btn, .rest-btn, .date-btn {
             background-color: white;
             color: #f7cdc0;
@@ -138,29 +184,27 @@
             color: white;
         }
 
-        /* 响应式调整（手机端优化） */
         @media only screen and (max-width: 600px) {
             .container {
                 margin: 20px auto;
                 padding: 15px;
             }
-            .welcome-box, .choice-box, .rest-box, .final-box, .fifth-box, .sixth-box {
+            .welcome-box, .choice-box, .rest-box, .final-box, .fifth-box, .sixth-box, .ninth-box, .last-photo-box {
                 padding: 20px;
             }
             .welcome-box h2, .choice-box h2, .rest-box h2, .final-box h2, .fifth-box h2, .sixth-box h2 {
                 font-size: 20px;
             }
-            .welcome-box p, .choice-box p, .rest-box p, .final-box p, .fifth-box p, .sixth-box p {
+            .welcome-box p, .choice-box p, .rest-box p, .final-box p, .fifth-box p, .sixth-box p, .ninth-box p {
                 font-size: 14px;
             }
             .confirm-btn, .choice-btn, .rest-btn, .date-btn {
                 padding: 8px 16px;
                 font-size: 14px;
             }
-            .welcome-box img, .final-box img {
+            .welcome-box img, .final-box img, .last-photo-box img {
                 width: 150px;
                 height: auto;
-                margin-right: 30px;
                 border-radius: 8px;
             }
         }
@@ -168,7 +212,7 @@
 </head>
 <body>
     <div class="container">
-        <!-- 第一个方框（初始显示） -->
+        <!-- 第一个方框 -->
         <div class="welcome-box" id="welcomeBox">
             <img src="photo\p4.jpg">
             <div class="text-content">
@@ -179,7 +223,7 @@
             </div>
         </div>
 
-        <!-- 第二个方框（初始隐藏） -->
+        <!-- 第二个方框 -->
         <div class="choice-box" id="choiceBox">
             <h2>2022年5月31日</h2>
             <p>今天晚上你因为排位心情不好，这时你选择？</p>
@@ -187,14 +231,14 @@
             <button class="choice-btn" id="goHomeBtn">去逛逛归宿</button>
         </div>
 
-        <!-- 第三个方框（初始隐藏） -->
+        <!-- 第三个方框 -->
         <div class="rest-box" id="restBox">
             <h2>似乎是个不错的休息地...</h2>
             <p>在这个秋千上看他们在聊什么吧</p>
             <button class="rest-btn" id="afterBtn">过了一会后...</button>
         </div>
 
-        <!-- 第四个方框（初始隐藏） -->
+        <!-- 第四个方框 -->
         <div class="final-box" id="finalBox">
             <div class="text-content">
                 <h2>有人悄悄坐上了你的秋千...</h2>
@@ -204,7 +248,7 @@
             </div>
         </div>
 
-        <!-- 第五个方框（初始隐藏） -->
+        <!-- 第五个方框 -->
         <div class="fifth-box" id="fifthBox">
             <h2>正式认识的第一天...有点懵</h2>
             <p>刚认识不久就吵架了呢</p>
@@ -212,18 +256,56 @@
             <h2>在未来的日子里我们也聊过很多次</h2>
             <p>聊是怎么相遇的，聊是怎么开始的</p>
             <h2>心动夜~</h2>
-            <button class="date-btn" id="dateBtn2026">2026年6月7日</button>
+            <button class="date-btn" id="dateBtn2026">乘坐悠屿牌时光机-出发6月7日</button>
         </div>
 
-        <!-- 第六个方框（初始隐藏） -->
+        <!-- 第六个方框 -->
         <div class="sixth-box" id="sixthBox">
             <h2>某人一直被夹嘴呢~</h2>
             <p>加上好友后还一直被调戏中...哼哼</p>
-            <button class="date-btn" id="timeMachineBtn">乘坐悠屿牌时光机-出发6月7日</button>
+            <button class="date-btn" id="timeMachineBtn">时光机加速中...</button>
+        </div>
+
+        <!-- 第七个方框 -->
+        <div class="seventh-box" id="seventhBox">
+            <p>每天晚上睡觉都要戴这狗的眼罩睡觉</p>
+            <p>跟你连麦的时候会用你送的耳机</p>
+            <p>想不到穿什么的时候会穿你送的上衣（穿裤子了）</p>
+            <p>出门的时候会挑选哪一个玩偶</p>
+            <p>看到香水瓶的时候会想闻闻味道</p>
+            <p>会把你写的信单独带过来放在抽屉里</p>
+            <p>醒来的时候会看有没有你的消息</p>
+            <p>睡前会期待你的晚安</p>
+            <p class="dots-text">...</p>
+            <p>无意识中，你已经成为我生活中的一部分</p>
+            <div style="text-align: center; margin-top: 10px;">
+                <button class="date-btn" id="thankYouBtn">谢谢你</button>
+            </div>
+        </div>
+
+        <!-- 第八个方框 -->
+        <div class="eighth-box" id="eighthBox">
+            <h2>一周年快乐哦，宝宝</h2>
+            <p>最初的想法是还原我们的恋爱经历，写到现在发现三言两语或者单纯的时间线很难去完整地还原</p>
+            <p>毕竟我们之间的故事如此缠绵</p>
+            <p>希望宝宝会喜欢我的礼物捏</p>
+            <button class="date-btn" id="pokeBtn">戳你</button>
+        </div>
+
+        <!-- 第九个方框 -->
+        <div class="ninth-box" id="ninthBox">
+            <p class="english-text">Every moment, every season, belongs to Yoyu.</p>
+            <p>世界上美好的东西不算多，立秋傍晚从河对岸吹来的风，和二十岁遇到的你</p>
+            <p>愿我们，岁岁常欢愉，万事皆胜意</p>
+            <button class="date-btn" id="loveBtn">悠悠喜欢小屿</button>
+        </div>
+
+        <!-- 最后一个图片方框 -->
+        <div class="last-photo-box" id="lastPhotoBox">
+            <img src="photo\p5.jpg">
         </div>
     </div>
 
-    <!-- JavaScript：处理页面切换 -->
     <script>
         // 获取元素
         const confirmBtn = document.getElementById('confirmBtn');
@@ -233,20 +315,27 @@
         const finalBox = document.getElementById('finalBox');
         const fifthBox = document.getElementById('fifthBox');
         const sixthBox = document.getElementById('sixthBox');
+        const seventhBox = document.getElementById('seventhBox');
+        const eighthBox = document.getElementById('eighthBox');
+        const ninthBox = document.getElementById('ninthBox');
+        const lastPhotoBox = document.getElementById('lastPhotoBox');
         const quitBtn = document.getElementById('quitBtn');
         const goHomeBtn = document.getElementById('goHomeBtn');
         const afterBtn = document.getElementById('afterBtn');
         const toFifthBtn = document.getElementById('toFifthBtn');
         const dateBtn2026 = document.getElementById('dateBtn2026');
         const timeMachineBtn = document.getElementById('timeMachineBtn');
+        const pokeBtn = document.getElementById('pokeBtn');
+        const thankYouBtn = document.getElementById('thankYouBtn');
+        const loveBtn = document.getElementById('loveBtn');
 
-        // 第一个方框的确认按钮点击事件
+        // 1 -> 2
         confirmBtn.addEventListener('click', function() {
             welcomeBox.style.display = 'none';
             choiceBox.style.display = 'block';
         });
 
-        // 第二个方框的"退出第五人格"按钮点击事件
+        // 2(退出) -> 2(动态内容) -> 3
         quitBtn.addEventListener('click', function() {
             choiceBox.innerHTML = '';
             
@@ -264,33 +353,52 @@
             });
         });
 
-        // 第二个方框的"去逛逛归宿"按钮点击事件
+        // 2(去归宿) -> 3
         goHomeBtn.addEventListener('click', function() {
             choiceBox.style.display = 'none';
             restBox.style.display = 'block';
         });
 
-        // 第三个方框的"过了一会..."按钮点击事件
+        // 3 -> 4
         afterBtn.addEventListener('click', function() {
             restBox.style.display = 'none';
             finalBox.style.display = 'flex';
         });
 
-        // 第四个方框的"2025年6月1日"按钮点击事件 → 显示第五个方框
+        // 4 -> 5
         toFifthBtn.addEventListener('click', function() {
             finalBox.style.display = 'none';
             fifthBox.style.display = 'block';
         });
 
-        // 第五个方框的"2026年6月7日"按钮点击事件 → 显示第六个方框
+        // 5 -> 6
         dateBtn2026.addEventListener('click', function() {
             fifthBox.style.display = 'none';
             sixthBox.style.display = 'block';
         });
 
-        // 第六个方框的"乘坐悠屿牌时光机~"按钮点击事件（预留后续扩展）
+        // 6 -> 7
         timeMachineBtn.addEventListener('click', function() {
-            // 后续可以继续添加下一个方框
+            sixthBox.style.display = 'none';
+            seventhBox.style.display = 'block';
+        });
+
+        // 【修复】7 -> 8 (点击第七个框的"谢谢你"，隐藏第七个框，显示第八个框)
+        thankYouBtn.addEventListener('click', function() {
+            seventhBox.style.display = 'none';
+            eighthBox.style.display = 'block';
+        });
+
+        // 【修复】8 -> 9 (点击第八个框的"戳你"，隐藏第八个框，显示第九个框)
+        pokeBtn.addEventListener('click', function() {
+            eighthBox.style.display = 'none';
+            ninthBox.style.display = 'block';
+        });
+
+        // 9 -> 最后图片
+        loveBtn.addEventListener('click', function() {
+            ninthBox.style.display = 'none';
+            lastPhotoBox.style.display = 'flex';
         });
     </script>
 </body>
