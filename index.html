@@ -88,14 +88,25 @@
             display: none;
         }
 
+        /* 第六个方框（初始隐藏） */
+        .sixth-box {
+            background-color: #f7cdc0;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: none;
+        }
+
         /* 方框内标题样式 */
-        .welcome-box h2, .choice-box h2, .rest-box h2, .final-box h2, .fifth-box h2 {
+        .welcome-box h2, .choice-box h2, .rest-box h2, .final-box h2, .fifth-box h2, .sixth-box h2 {
             font-size: 24px;
             margin-bottom: 15px;
         }
 
         /* 方框内段落样式 */
-        .welcome-box p, .choice-box p, .rest-box p, .final-box p, .fifth-box p {
+        .welcome-box p, .choice-box p, .rest-box p, .final-box p, .fifth-box p, .sixth-box p {
             font-size: 16px;
             line-height: 1.6;
             margin-bottom: 20px;
@@ -133,13 +144,13 @@
                 margin: 20px auto;
                 padding: 15px;
             }
-            .welcome-box, .choice-box, .rest-box, .final-box, .fifth-box {
+            .welcome-box, .choice-box, .rest-box, .final-box, .fifth-box, .sixth-box {
                 padding: 20px;
             }
-            .welcome-box h2, .choice-box h2, .rest-box h2, .final-box h2, .fifth-box h2 {
+            .welcome-box h2, .choice-box h2, .rest-box h2, .final-box h2, .fifth-box h2, .sixth-box h2 {
                 font-size: 20px;
             }
-            .welcome-box p, .choice-box p, .rest-box p, .final-box p, .fifth-box p {
+            .welcome-box p, .choice-box p, .rest-box p, .final-box p, .fifth-box p, .sixth-box p {
                 font-size: 14px;
             }
             .confirm-btn, .choice-btn, .rest-btn, .date-btn {
@@ -196,8 +207,19 @@
         <!-- 第五个方框（初始隐藏） -->
         <div class="fifth-box" id="fifthBox">
             <h2>正式认识的第一天...有点懵</h2>
-            <p>事后我们聊过很多次，聊是怎么相遇的，聊是怎么开始的</p>
+            <p>刚认识不久就吵架了呢</p>
+            <p>很感谢当时的自己，说出了自己的真实想法</p>
+            <h2>在未来的日子里我们也聊过很多次</h2>
+            <p>聊是怎么相遇的，聊是怎么开始的</p>
+            <h2>心动夜~</h2>
             <button class="date-btn" id="dateBtn2026">2026年6月7日</button>
+        </div>
+
+        <!-- 第六个方框（初始隐藏） -->
+        <div class="sixth-box" id="sixthBox">
+            <h2>某人一直被夹嘴呢~</h2>
+            <p>加上好友后还一直被调戏中...哼哼</p>
+            <button class="date-btn" id="timeMachineBtn">乘坐悠屿牌时光机-出发6月7日</button>
         </div>
     </div>
 
@@ -210,11 +232,13 @@
         const restBox = document.getElementById('restBox');
         const finalBox = document.getElementById('finalBox');
         const fifthBox = document.getElementById('fifthBox');
+        const sixthBox = document.getElementById('sixthBox');
         const quitBtn = document.getElementById('quitBtn');
         const goHomeBtn = document.getElementById('goHomeBtn');
         const afterBtn = document.getElementById('afterBtn');
         const toFifthBtn = document.getElementById('toFifthBtn');
         const dateBtn2026 = document.getElementById('dateBtn2026');
+        const timeMachineBtn = document.getElementById('timeMachineBtn');
 
         // 第一个方框的确认按钮点击事件
         confirmBtn.addEventListener('click', function() {
@@ -258,8 +282,14 @@
             fifthBox.style.display = 'block';
         });
 
-        // 第五个方框的"2026年6月7日"按钮点击事件（预留后续扩展）
+        // 第五个方框的"2026年6月7日"按钮点击事件 → 显示第六个方框
         dateBtn2026.addEventListener('click', function() {
+            fifthBox.style.display = 'none';
+            sixthBox.style.display = 'block';
+        });
+
+        // 第六个方框的"乘坐悠屿牌时光机~"按钮点击事件（预留后续扩展）
+        timeMachineBtn.addEventListener('click', function() {
             // 后续可以继续添加下一个方框
         });
     </script>
